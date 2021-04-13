@@ -75,6 +75,7 @@ console.log(fruits.indexOf('oranges'));//查询oranges的索引值
 console.log(fruits);*/
 
 //对象语法
+/*
 const person ={
     firstName: 'Jhon',
     lastName: 'Doe',
@@ -85,10 +86,85 @@ const person ={
         city: 'Boston',
         state: 'MA'
     }
-}
+}*/
+/*
 console.log(person);
 //{firstName: "Jhon", lastName: "Doe", age: 30, hobbies: Array(3), address: {…}}
 console.log(person.firstName,person.lastName);//输出多个值，逗号隔开
+console.log(person.hobbies[1]);//输出preson中hobbies中的movies
+console.log(person.address.city);//输出preson中address中的city
 
-//https://www.bilibili.com/video/BV1jE411T7ya?from=search&seid=3875009973904582287
-//31:57
+const{firstName,lastName,address:{city}}=person;//解构，从preson取出firstname等等
+console.log(city);*/
+/*
+person.email = 'joho@gmail.com';//在person中添加email
+console.log(person);*/
+/*
+const todos = [
+    {
+        id:1,
+        text:'Take out trash',
+        isCompleted:true
+    },
+    {
+        id:2,
+        text:'Meetiing with boss',
+        isCompleted:true
+    },
+    {
+        id:3,
+        text:'Dentist appt',
+        isCompleted:false
+    },
+];
+console.log(todos[1].text);//输出todos的id=2 的text
+
+//Json数据格式，全栈开发广泛使用，用到API，当你向服务器发送数据会用到json格式，接收也是
+const todoJSON = JSON.stringify(todos);//调用stringify方法，引入todos数据，赋值到todoJSON
+console.log(todoJSON);//得到一个可以向服务器发送的JSON字符串数据*/
+/*
+//For
+for(let i = 0; i < 10; i++){
+    console.log(`For Loop Number:${i}`);
+}
+//while
+let i = 0;
+while(i < 10){
+    console.log(`While Loop Number:${i}`);
+    i++;
+}*/
+
+const todos = [
+    {
+        id:1,
+        text:'Take out trash',
+        isCompleted:true
+    },
+    {
+        id:2,
+        text:'Meetiing with boss',
+        isCompleted:true
+    },
+    {
+        id:3,
+        text:'Dentist appt',
+        isCompleted:false
+    },
+];
+/*for(let i = 0;i < todos.length;i++){
+    console.log(todos[i].text);
+}
+
+for(let todo of todos){
+    console.log(todo.id);
+    console.log(todo.text);
+}*/
+
+//forEach,map,filter
+/*todos.forEach(function(todo){
+    console.log(todo.id,todo.text);
+})*/
+
+const todoText = todos.map(function(todo){
+    console
+})
