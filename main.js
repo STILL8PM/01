@@ -160,11 +160,71 @@ for(let todo of todos){
     console.log(todo.text);
 }*/
 
-//forEach,map,filter
+//forEach,map,filter1、map速度比foreach快 2、map会返回一个新数组,不对原数组产生影响,foreach不会产生新数组，foreach返回undefined
+//3、map因为返回数组所以可以链式操作，foreach不能 4, map里可以用return ,而foreach里用return不起作用，foreach不能用break，会直接报错
 /*todos.forEach(function(todo){
     console.log(todo.id,todo.text);
 })*/
 
-const todoText = todos.map(function(todo){
-    console
+/*const todoText = todos.map(function(todo){
+    return todo.text;
+});
+console.log(todoText);*/
+/*
+const todoCompleted = todos.filter(function(todo){
+    return todo.isCompleted === true;
+}).map(function(todo){
+    return todo.text;
 })
+console.log(todoCompleted);*/
+
+//条件语句
+/*const x = 6;
+const y = 11;
+
+if(x > 5 || y > 10){
+    console.log('x is more than 5 or y is more than 10');
+}//或，其中一个true就输出
+
+if(x > 5 && y > 10){
+    console.log('x is more than 5 or y is more than 10');
+}//与，两个都为true才输出
+*/
+
+//三元操作符
+/*const x = 10;
+
+const color = x >10 ? 'red' : 'bule';
+//switch
+switch(color){
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'bule':
+        console.log('color is bule');
+        break;
+    default:
+        console.log('color is NOT red or bule');
+        break;
+}*/
+
+//function
+/*
+function addNums(num1,num2){
+    console.log(num1+num2);//新建函数addNums，输出num1+num2
+}
+addNums(8,4);
+
+function addNums(num1=1,num2=2){
+    return num1 + num2;
+}
+console.log(addNums(8,4));//输出12*/
+/*
+const addNums = (num1=1,num2=2) => num1 + num2;
+console.log (addNums(5,5));*/
+
+const addNums = num1 => num1 + 5;
+console.log (addNums(5));
+
+//https://www.bilibili.com/video/BV1jE411T7ya?from=search&seid=3875009973904582287
+59:25
