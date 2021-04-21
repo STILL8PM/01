@@ -1,0 +1,27 @@
+
+    JavaScript诞生于1995年，出现主要用于处理网页中的前端验证
+    所谓前端验证，是指检查用户输入的内容是否符合一定规则
+    比如：用户名长度，密码长度，邮箱格式等
+
+    Netscape（网景）公司开发live script（js前身）
+    后期sun公司（JAVA）介入开发，后借东风
+    现如今用于各种交互动效,nodejs写服务器的
+
+    网警 navigator JavaScript 
+    96年微软 explore  JScript
+    1997年网景玩不过微软就开源了，给一个欧洲协会，定义新标准ECMAScript（ES）
+
+    浏览器                  JavaScript实现方式：js引擎
+    FireFox（navigator）    SpiderMonkey(蜘蛛猴)
+    Internet Explorer       JScript/Chakra
+    Safari                  JavaScriptCore
+    Chrome                  V8（最快）
+    Carakan                 Carakan    
+
+
+    ECMAScript是JavaScript标准
+    一个完整的JavaScript由ECMAScript(标准)，DOM（文档、对象、模型），BOM（浏览器对象、模型）
+ 
+
+    JS的特点：解释型语言；类似于c和java的语法结构；动态语言；基于原型的面向对象
+    
