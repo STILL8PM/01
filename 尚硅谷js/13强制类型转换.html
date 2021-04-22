@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        强制类型转换
+            -指将一个数据类型强制转换为其他的数据类型
+            -类型转换主要指，将其他的数据类型，转换为String、Number、Boolean
+                方式一：
+                    -调用被转换数据类型的toString（）方法
+                    -该方法不会影响到原变量，它会将转换的结果返回
+                    -但是注意：null和underfind这两个值没有toString（）方法，
+                        但是如果调用他们的方法，会报错
+                方式二：
+                    -调用String（）函数，并将被转换的数据作为参数传递给函数
+                    -使用String（）函数做强制类型转换时，
+                        对于Number和Boolean实际上就是调用的toString()方法
+                        但是对于null和undefined,就不会调用toString（）方法
+                            它会将null直接转换为”null“
+                            将underfined直接转换为”underfined“
+        */
+       /*
+            将其他数据转化为String
+       */
+       /*  var a = 123;
+        a = a.toString();//调用a的toString（）方法转换并覆盖a
+        console.log(typeof a);
+        console.log(a); */
+
+       /*  var a = true;
+        a = a.toString();//调用a的toString（）方法转换并覆盖a
+        console.log(typeof a);
+        console.log(a);*/
+
+        /* var a = null;
+        // a = a.toString();//null和underfined都报错
+        a = 123;
+        // 调用String（）函数，来将a转换为字符串
+        a = String(a);//调用String()函数转换并覆盖a
+
+        a = null;
+        a = String(a);
+
+        a = undefined;
+        a = String(a);
+
+        console.log(typeof a);
+        console.log(a); */
+
+        /*
+        将其他数据类型转换为Number
+                方式一：
+                    使用Number（）函数
+                        -字符串-->数值
+                            1.如果纯数字字符串，则直接转换
+                            2.如果有非数字的字符串，则转换为NaN
+                            3.如果字符串是空串或全是空格，则转换为0
+                        -布尔-->数值
+                            true转换为1，false转换为0
+                        -null-->0
+                        -undefined-->NaN
+                方式二：
+                    -这种方式专门用来对付字符串
+                    -parseInt（）把一个字符串转换为一个整数
+                        取出字符串有效的整数转换为number，从前往后
+                    -parseFloat()把一个字符串转换为一个浮点数
+                        取出字符串有效的小数
+        */
+
+        /* var a = '123';
+        a = Number(a);// 调用Number（）函数，来将a转换为Number类型
+        
+        var a = true;//true转换为1，false转换为0
+        a = Number(a);// 调用Number（）函数，来将a转换为Number类型
+        
+        var a = null;//null转换为0
+        a = Number(a);// 调用Number（）函数，来将a转换为Number类型
+              
+        var a = undefined;//undefined转换为NaN
+        a = Number(a);// 调用Number（）函数，来将a转换为Number类型
+        console.log(typeof a);
+        console.log(a);   
+        */ 
+    
+        a = '123px123';//返回123
+        a = parseInt(a);// 调用parseInt（）函数，来将a转换为Number类型
+        console.log(a);
+        a = '123.456.789px';//返回123.456
+        a = parseFloat(a);// 调用parseInt（）函数，来将a转换为Number类型
+        console.log(a);
+        
+        a = true;
+        a = parseInt(a);
+        console.log(a);
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
