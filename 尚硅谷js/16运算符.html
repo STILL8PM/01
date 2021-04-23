@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,25 +15,79 @@
                         number string Boolean undefined object
 
                 算数运算符：
-                    当对非Number类型的值进行运算时，会将这些值转换为
-                    +   对两个值进行加法运算，并将结果返回
+                    当对非Number类型的值进行运算时，会将这些值转换为Number
+                    然后对两个值进行加法运算，并将结果返回
+                        如果对两个字符串进行加法运算，会做拼串操作
+                    
+                        任何值和字符串做加法运算，都会先转换成字符串，再拼串
                     -   
+                        -可以对两个值进行减法运算，并将结果返回
                     *
+                        *可以对两个值进行乘法运算
                     /
+                        /可以对两个值进行除法运算
                     %
+                        %取模运算(取余数)
         */
         var a = 123;
         var result = typeof a;
-        console.log(result);
+        // console.log(result);
         // console.log(typeof result);
         result = a + 1;//124
         result = 456 + 789;//1245
         result = true + 1;//2
         result = true + false;//1
-        console.log(result);
+        result = 2 + null;//2
+        result = 2 + NaN;//NaN
+        result = '123' + '456';//拼接字符串
+        var str = '锄禾日当午，' +
+            '汗滴禾下土。' +
+            '谁知盘中餐，' +
+            '粒粒皆辛苦';//引号不能换行，用+号拼接结构美观
+        result = 123 + '1';//1231
+        result = true + '1';//true1
+        // console.log(result);
+        var c = 123;
+        // c =  c + '';//任意数据类型加空串转换成字符串
+        // console.log(typeof c);
+        // console.log('c= ' +c);//c= 123
+        
+        /* result = 1 + 2 +'3';//33
+        console.log('result='+result);//result=33
+
+        result = '1'+2+3;123
+        console.log('result='+result);//result=123 */
+
+        result = 100 - 5;//95
+        result = 100 - true;//99
+        result = 100 - '1';//'1'转换为数值1，输出99
+        result = 2 * 2;//4
+        result = 2 * '8';//'8'转换为数值8,输出16
+        result = 2 * undefined;//NaN
+        result = 2 * null;//0
+        result = 4 / 2;//2
+        result = 3 / 2;//1.5
+        console.log('result='+result);
+        /* 
+        任何值做- * /运算都会自动转换为number
+            我们可以利用这一特点做隐式的类型转换
+            可以通过为一个值-0 *1 /1来将其转换为Number
+            原理同Number（）函数一样，但是使用起来便捷  
+        */
+        /* var d ='123';
+        d = d - 0;
+        d = d * 1;
+        d = d / 1;
+        console.log(typeof d);
+        console.log(d); */
+
+        result = 9 % 3;//9除以3余0  result=0
+        result = 9 % 4;//9除以4余1  result=1
+        console.log('result='+result);
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

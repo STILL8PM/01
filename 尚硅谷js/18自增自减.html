@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        自增
+            -通过自增可以使自身的基础上增加1
+            -对一个变量自增以后，原变量的值会立即自增1
+            -自增分为两种：前++（++a）和后++（a++）
+                无论是a++还是++a，都会立即使原变量自增1
+                不同是的是a++和++a的值不同
+                a++等于原变量的值，++a的等于自增后的值
+        自减
+            -通过自减可以使自身的基础上减1
+            自减分为两种：前--（--a）和后--（a--）
+                无论是a--还是--a，都会立即使原变量自减1
+                不同是的是a--和--a的值不同
+                a--等于原变量的值，--a的等于自减后的值
+
+        */
+        var a = 1;
+        a++;//使a自增1
+        ++a;
+        console.log('a = '+a); 
+
+        var c = 10;
+        c++;
+        console.log(c++);//11
+
+        var d = 20;
+        /* var result = d++ + ++d +d;//20+22+22
+        console.log('result='+ result);
+ */
+        d = d++;
+        console.log('d='+d);
+
+        var num = 10;
+
+        console.log('num='+num);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
