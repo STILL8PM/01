@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            定义一个函数，判断一个数字是否是偶数，如果是返回true,否则返回false
+        */
+        function isOu(num){
+            /* if(num%2==0){
+                return true;
+            }else{
+                return false;
+            } */
+
+            return num % 2 == 0;
+        }
+        var result = isOu(8)
+        // console.log("result = "+result);
+
+        /*  
+            定义一个函数，可以根据半径计算一个圆的面积，并返回计算结果
+            3.14*r*r
+        */
+        function mj(r){
+            return 3.14*r*r;
+        }
+        // result = mj(5);
+        // console.log("result = "+result);
+
+
+        /*
+            创建一个函数，可以在控制台输出一个人的信息
+                可以输出name age gender address
+        */
+
+        function sy(o){
+            // console.log("o = "+o);
+            console.log("我是"+o.name+",今年我"+o.age+"岁了，"+"我是一个"+o.gender+"人"+",我住在"+o.address);
+        }
+        // sy("孙悟空",18,"男","高老庄");
+        //创建一个对象
+        var obj = {
+            name:"孙悟空",
+            age:18,
+            gender:"男",
+            address:"高老庄"
+        };
+        // sy(obj);
+        /*
+            实参可以是一个对象，也能是函数
+        */
+
+        function fun(a){
+            // console.log("a = "+a);
+            // a(obj);
+        }
+        // fun(sy);
+        // fun(function(){alert("hello")});
+        fun(mj(10));
+
+        /*
+            mj()
+                -调用函数
+                -相当于使用的函数的返回值
+            mj
+                -函数对象
+                -相当于直接使用函数对象
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
